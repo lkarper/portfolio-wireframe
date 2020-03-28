@@ -22,6 +22,7 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 nav {
@@ -47,10 +48,6 @@ ul {
 ul li {
     display: inline-block;
     font-size: 16px;
-}
-
-li a {
-    text-decoration: none;
 }
 
 .toggle {
@@ -100,11 +97,6 @@ footer {
     background: grey;
 }
 
-.mail-icon, .linked-in {
-    color: black;
-    font-size: 30px;
-}
-
 h1 {
     text-align: center;
     font-size: 45px;
@@ -122,16 +114,22 @@ h2 {
     text-align: center;
 }
 
+section p {
+    text-align: center;
+}
+
 .tech-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: 1px solid black;
+    max-width: 50%;
+    height: 50px;
+    background: lightgray;
 }
 
-.tech-icon {
-    height: 25px;
-    width: 25px;
-    margin: 5px;
+.tech-container p {
+    margin: 0 auto;
 }
 
 .bio, .portfolio {
@@ -150,18 +148,23 @@ h2 {
 
 .port-section {
     width: 100%;
-    margin: auto;
+    margin: 10px auto;
+    border: 1px solid black;
+    background: grey;
+    padding: 10px;
 }
 
 .port-img-big {
     width: 75%;
     margin: 5px auto;
+    background-color: lightgray;
 }
 
-.port-img-big img {
+.port-img-big p {
     width: 100%;
-    height: auto;
+    height: 200px;
     text-align: center;
+    border: 1px solid black;
 }
 
 .project-links {
@@ -172,7 +175,7 @@ h2 {
 .project-links a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .carousel {
@@ -184,12 +187,15 @@ h2 {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: flex-end;
-    
 }
 
-.carousel img {
-    height: auto;
+.carousel p {
+    height: 75px;
     width: 24.5%;   
+    border: 1px solid black;
+    font-size: 12px;
+    background: lightgray;
+    padding: 5px;
 }
 
 .click-to-enlarge {
@@ -204,21 +210,28 @@ h2 {
 
 .email-port-buttons button {
     border: 1px solid black;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 footer {
-    padding-top: 10px;
-}
-
-footer p {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 .footer-email {
+    display: none;
     color: black;
     text-decoration: none;
     font-size: 18px;
+}
+
+footer div {
+    width: auto;
+    height: 80%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid black;
+    background: lightgray;
 }
 
 @media screen and (min-width: 750px){
@@ -278,11 +291,20 @@ footer p {
         font-size: 30px;
     }
 
+    .carousel p {
+        font-size: 18px;
+    }
+
     .bio, .portfolio {
         margin: 0 auto;
     }
 
-    footer p {
+    .footer-email {
         display: inline-block;
+    }
+
+    .tech-container {
+        max-width: 30%;
+        height: 100px;
     }
 }
